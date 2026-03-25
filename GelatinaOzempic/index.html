@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Quiz Interactivo</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Otimizações VTurb (Preloads VSL 1 & 2) -->
+    <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+    <!-- Tela 24 Preloads -->
+    <link rel="preload" href="https://scripts.converteai.net/ea7e3141-e734-41ac-9da4-46a9c79986a5/players/69c3334c5610b6167ab9637d/v4/player.js" as="script">
+    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/ea7e3141-e734-41ac-9da4-46a9c79986a5/69c333465610b6167ab9636e/main.m3u8" as="fetch">
+
+    <!-- Tela 29 Preloads -->
+    <link rel="preload" href="https://scripts.converteai.net/ea7e3141-e734-41ac-9da4-46a9c79986a5/players/69c33353c9da180d96d8d346/v4/player.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/ea7e3141-e734-41ac-9da4-46a9c79986a5/69c3334ec9da180d96d8d336/main.m3u8" as="fetch">
+</head>
+<body>
+    <!-- Container Raiz Responsivo -->
+    <div id="app-container" class="app-container">
+        
+        <!-- Header Fixa -->
+        <header id="app-header" class="app-header hidden">
+            <div class="header-top-row">
+                <button id="btn-back" class="btn-back" aria-label="Volver">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+                <div class="header-logo-container">
+                    <img src="midia/start/GelatinaOzempic-Logo.png" alt="Gelatina Ozempic Logo" class="header-logo" />
+                </div>
+                <div style="width: 40px;"></div> <!-- placeholder balance -->
+            </div>
+            
+            <div class="header-bottom-row">
+                <div class="progress-bar-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Área de Conteúdo Dinâmica -->
+        <main id="app-content" class="app-content">
+            <!-- As telas serão injetadas aqui pelo JavaScript de forma dinâmica -->
+        </main>
+    </div>
+
+    <!-- Módulos JavaScript para escalabilidade -->
+    <script type="module" src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
