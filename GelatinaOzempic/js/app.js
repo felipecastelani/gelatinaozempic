@@ -1,5 +1,13 @@
 import { screens } from './screens.js';
 
+/*
+|--------------------------------------------------------------------------
+| LINKS EDITAVEIS
+|--------------------------------------------------------------------------
+| Altere o link abaixo sempre que quiser trocar o checkout da CTA final.
+*/
+const CTA_FINAL_CHECKOUT_URL = 'https://pay.hotmart.com/V105068067A?checkoutMode=10';
+
 class QuizApp {
     constructor() {
         this.currentScreenIndex = 0;
@@ -694,14 +702,14 @@ class QuizApp {
                             <div class="installments">O en 6 pagos de $ ${valSemJuros}</div>
                         </div>
 
-                        <button class="btn btn-magic btn-buy">¡QUIERO EMPEZAR! 🥰</button>
+                        <a class="btn btn-magic btn-buy" href="${CTA_FINAL_CHECKOUT_URL}" target="_blank" rel="noopener noreferrer">¡QUIERO EMPEZAR! 🥰</a>
                     </div>
 
                     <div class="cta-guarantee-card">
                         <img src="midia/cta/Garantia30D.png" class="guarantee-img" alt="Garantía de 30 días">
                         <h4>Garantía de reembolso de 30 días</h4>
                         <p>Sea por el motivo que sea, tienes 30 días para pedir la devolución de tu dinero. Devolución sin preguntas ni burocracia.</p>
-                        <button class="btn btn-magic btn-buy">¡QUIERO EMPEZAR! 🥰</button>
+                        <a class="btn btn-magic btn-buy" href="${CTA_FINAL_CHECKOUT_URL}" target="_blank" rel="noopener noreferrer">¡QUIERO EMPEZAR! 🥰</a>
                     </div>
 
                     <div class="cta-faq-section">
@@ -738,7 +746,7 @@ class QuizApp {
                     </div>
 
                     <div class="cta-footer">
-                        <button class="btn btn-magic btn-buy">¡QUIERO EMPEZAR! 🥰</button>
+                        <a class="btn btn-magic btn-buy" href="${CTA_FINAL_CHECKOUT_URL}" target="_blank" rel="noopener noreferrer">¡QUIERO EMPEZAR! 🥰</a>
                         <p class="footer-secure">🔒 Compra 100% segura • Garantía de 30 días</p>
                     </div>
 
@@ -1255,9 +1263,9 @@ class QuizApp {
             
             const buyBtns = screenEl.querySelectorAll('.btn-buy');
             buyBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    alert('Redirigiendo a la pantalla de pago...'); 
-                });
+                btn.setAttribute('href', CTA_FINAL_CHECKOUT_URL);
+                btn.setAttribute('target', '_blank');
+                btn.setAttribute('rel', 'noopener noreferrer');
             });
         }
     }
